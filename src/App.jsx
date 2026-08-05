@@ -5,6 +5,7 @@ import Upload from "./pages/Upload";
 import SummaryResult from "./pages/SummaryResult";
 import Quiz from "./pages/Quiz";
 import MySummaries from "./pages/MySummaries";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/summary" element={<SummaryResult />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/summaries" element={<MySummaries />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
