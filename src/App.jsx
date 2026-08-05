@@ -3,6 +3,7 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import Upload from "./pages/Upload";
 import SummaryResult from "./pages/SummaryResult";
+import Quiz from "./pages/Quiz";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/summary" element={<SummaryResult />} />
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </BrowserRouter>
   );
