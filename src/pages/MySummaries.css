@@ -1,0 +1,200 @@
+.mysum-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f5fb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.mysum-main {
+  flex: 1;
+  padding: 24px 32px 48px;
+}
+
+.mysum-topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.mysum-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.mysum-header-row h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.mysum-header-row p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.mysum-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.mysum-icon-toggle {
+  display: flex;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.mysum-icon-toggle button {
+  border: none;
+  background: transparent;
+  padding: 9px 12px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.mysum-icon-toggle button.active {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.mysum-pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 10px;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+}
+
+.mysum-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.book-summary-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-summary-cover {
+  position: relative;
+  height: 160px;
+  background: #1f2937;
+}
+
+.status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.status-badge.completed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.in-progress {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.book-summary-body {
+  padding: 16px 18px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-summary-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.book-summary-desc {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0 0 14px;
+  flex: 1;
+}
+
+.processing-row {
+  margin-bottom: 12px;
+}
+
+.processing-track {
+  height: 5px;
+  background: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.processing-fill {
+  height: 100%;
+  background: #4338ca;
+}
+
+.processing-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #4338ca;
+  letter-spacing: 0.03em;
+}
+
+.book-summary-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #9ca3af;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 12px;
+}
+
+.mysum-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 0;
+}
+
+.mysum-footer-text {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.load-more-btn {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+}
