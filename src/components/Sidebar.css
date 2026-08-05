@@ -83,3 +83,18 @@
   flex-direction: column;
   gap: 4px;
 }
+.new-summary-btn {
+  background: #4338ca;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.new-summary-btn:hover {
+  background: #3730a3;
+}

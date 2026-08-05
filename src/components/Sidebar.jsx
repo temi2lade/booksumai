@@ -1,17 +1,20 @@
+import { Link, useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 
 const navItems = [
-  { key: "dashboard", label: "Dashboard", icon: "▦" },
-  { key: "summaries", label: "My Summaries", icon: "📄" },
-  { key: "profile", label: "Profile", icon: "👤" },
+  { key: "dashboard", label: "Dashboard", icon: "▦", path: "/dashboard" },
+  { key: "summaries", label: "My Summaries", icon: "📄", path: "/summaries" },
+  { key: "profile", label: "Profile", icon: "👤", path: "/profile" },
 ];
 
 const footerItems = [
-  { key: "settings", label: "Settings", icon: "⚙" },
-  { key: "support", label: "Support", icon: "❓" },
+  { key: "settings", label: "Settings", icon: "⚙", path: "/settings" },
+  { key: "support", label: "Support", icon: "❓", path: "/support" },
 ];
 
-export default function Sidebar({ active = "dashboard", onNavigate }) {
+export default function Sidebar({ active = "dashboard" }) {
+  const navigate = useNavigate();
+
   return (
     <aside className="sidebar">
       <div className="sidebar-logo">
@@ -22,27 +25,27 @@ export default function Sidebar({ active = "dashboard", onNavigate }) {
         </div>
       </div>
 
+      <button className="new-summary-btn" onClick={() => navigate("/upload")}>
+        + New Summary
+      </button>
+
       <nav className="sidebar-nav">
         {navItems.map((item) => (
-          <button
+          <Link
             key={item.key}
+            to={item.path}
             className={`sidebar-link ${active === item.key ? "active" : ""}`}
-            onClick={() => onNavigate?.(item.key)}
           >
             <span>{item.icon}</span> {item.label}
-          </button>
+          </Link>
         ))}
       </nav>
 
       <div className="sidebar-footer">
         {footerItems.map((item) => (
-          <button
-            key={item.key}
-            className="sidebar-link"
-            onClick={() => onNavigate?.(item.key)}
-          >
+          <Link key={item.key} to={item.path} className="sidebar-link">
             <span>{item.icon}</span> {item.label}
-          </button>
+          </Link>
         ))}
       </div>
     </aside>
